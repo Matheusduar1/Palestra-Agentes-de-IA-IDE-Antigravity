@@ -1,0 +1,1485 @@
+/* ==========================================================================
+   MATHEUS DUARTE | 2026 — Componentes Interativos, Slides, Diagramas & UI
+   REGRA ESTRITA DE SEGURANÇA (CSP): ZERO estilos inline. Toda variação de
+   largura, cor ou estado é controlada por classes e atributos data-*.
+   ========================================================================== */
+
+/* Botões Reutilizáveis */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-primary:hover {
+  background: var(--accent-primary-hover);
+  color: var(--text-on-accent);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-ghost {
+  background: var(--accent-primary-soft);
+  color: var(--accent-primary);
+  border-color: transparent;
+}
+
+.btn-ghost:hover {
+  border-color: var(--border-accent);
+}
+
+.btn-danger {
+  background: var(--status-danger);
+  color: #FFFFFF;
+}
+
+.btn-success {
+  background: var(--status-success);
+  color: #FFFFFF;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-icon {
+  padding: 8px 12px;
+}
+
+/* Cards & Superfícies */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card-interactive:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--accent-primary-soft);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-accent);
+}
+
+.badge-neutral {
+  background: var(--bg-surface-muted);
+  color: var(--text-secondary);
+  border-color: var(--border-subtle);
+}
+
+.badge-success {
+  background: var(--status-success-soft);
+  color: var(--status-success);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.badge-warning {
+  background: var(--status-warning-soft);
+  color: var(--status-warning);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.badge-danger {
+  background: var(--status-danger-soft);
+  color: var(--status-danger);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.badge-cyan {
+  background: var(--accent-cyan-soft);
+  color: var(--accent-cyan);
+  border-color: rgba(36, 203, 229, 0.38);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Hero Principal (Abertura da Apresentação)
+   ========================================================================== */
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 768px) {
+  .hero-card {
+    padding: 36px 40px;
+  }
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-cyan-bright), var(--status-success));
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1.35fr 0.85fr;
+  }
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.hero-lead {
+  margin: 0 0 20px;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 62ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 640px) {
+  .hero-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.stat-chip {
+  background: var(--bg-surface-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+}
+
+.stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+/* Cartão Lateral do Palestrante (Fiel ao Broadcast da Semana Técnica) */
+.speaker-broadcast-card {
+  background: linear-gradient(155deg, var(--hud-navy-start), var(--hud-navy-end));
+  border: 1px solid var(--hud-cyan-line);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  color: #F8FAFC;
+  box-shadow: var(--shadow-md);
+}
+
+.speaker-broadcast-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #24CBE5;
+  letter-spacing: 0.08em;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(36, 203, 229, 0.22);
+}
+
+.speaker-profile-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.speaker-photo {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #24CBE5;
+  background: #0F172A;
+  flex-shrink: 0;
+}
+
+.speaker-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.speaker-role {
+  margin: 2px 0 6px;
+  font-size: 0.84rem;
+  color: #CBD5E1;
+}
+
+.speaker-sub {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #38BDF8;
+}
+
+.speaker-quote-box {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 3px solid #24CBE5;
+  font-size: 0.85rem;
+  color: #E2E8F0;
+}
+
+/* ==========================================================================
+   Comparativo Passiva vs. Ativa + Conceitos Iniciais
+   ========================================================================== */
+
+.compare-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compare-card.is-active-agent {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.compare-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .pillars-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.pillar-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  letter-spacing: 0.06em;
+}
+
+.pillar-title {
+  margin: 6px 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.tools-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.tool-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-muted);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Simulador Interativo do Agentic Loop & Governança (HITL vs Turbo)
+   ========================================================================== */
+
+.simulator-shell {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.sim-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--bg-surface-muted);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.sim-mode-switch {
+  display: inline-flex;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  padding: 3px;
+  gap: 4px;
+}
+
+.sim-mode-btn {
+  border: 0;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.sim-mode-btn.is-active {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+}
+
+.sim-mode-btn.is-turbo.is-active {
+  background: var(--status-warning);
+  color: #0F172A;
+}
+
+.sim-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 960px) {
+  .sim-body {
+    grid-template-columns: 1fr 1.15fr;
+    padding: 24px;
+  }
+}
+
+.sim-scenarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.scenario-btn {
+  padding: 7px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface-muted);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.scenario-btn.is-active {
+  background: var(--accent-primary-soft);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+/* Os 4 nós do Loop de Raciocínio */
+.loop-nodes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.loop-node {
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-muted);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.loop-node.is-current {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-soft);
+  box-shadow: var(--shadow-glow);
+}
+
+.loop-node.is-done {
+  border-color: var(--status-success);
+  background: var(--status-success-soft);
+}
+
+.loop-node-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.loop-node.is-current .loop-node-tag {
+  color: var(--accent-primary);
+}
+
+.loop-node.is-done .loop-node-tag {
+  color: var(--status-success);
+}
+
+.loop-node-title {
+  margin: 4px 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.loop-node-desc {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* Janela Estilo Terminal macOS (igual aos slides de Matheus) */
+.terminal-window {
+  background: var(--terminal-bg);
+  border: 1px solid var(--terminal-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  color: var(--terminal-text);
+  box-shadow: var(--shadow-md);
+}
+
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--terminal-bar);
+  border-bottom: 1px solid var(--terminal-border);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--terminal-muted);
+}
+
+.terminal-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-dot.dot-red { background: #EF4444; }
+.terminal-dot.dot-amber { background: #F59E0B; }
+.terminal-dot.dot-green { background: #10B981; }
+
+.terminal-body {
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.terminal-line {
+  margin: 0 0 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.terminal-line.is-cmd { color: #38BDF8; }
+.terminal-line.is-ok { color: #34D399; }
+.terminal-line.is-warn { color: #FBBF24; }
+.terminal-line.is-muted { color: #94A3B8; }
+
+.sim-hitl-gate {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: var(--status-warning-soft);
+  border: 1px solid rgba(245, 158, 11, 0.5);
+}
+
+.sim-hitl-gate[hidden] {
+  display: none;
+}
+
+.sim-hitl-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.sim-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* ==========================================================================
+   Explorador de Slides Originais (MATHEUS DUARTE | 2026)
+   ========================================================================== */
+
+.deck-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.deck-progress-track {
+  width: 100%;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface-muted);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.deck-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-cyan-bright));
+  transition: width var(--transition-base);
+  width: 10%;
+}
+
+.deck-progress-fill[data-progress="1"] { width: 10%; }
+.deck-progress-fill[data-progress="2"] { width: 20%; }
+.deck-progress-fill[data-progress="3"] { width: 30%; }
+.deck-progress-fill[data-progress="4"] { width: 40%; }
+.deck-progress-fill[data-progress="5"] { width: 50%; }
+.deck-progress-fill[data-progress="6"] { width: 60%; }
+.deck-progress-fill[data-progress="7"] { width: 70%; }
+.deck-progress-fill[data-progress="8"] { width: 80%; }
+.deck-progress-fill[data-progress="9"] { width: 90%; }
+.deck-progress-fill[data-progress="10"] { width: 100%; }
+
+.slide-layout-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (min-width: 980px) {
+  .slide-layout-split {
+    grid-template-columns: 1.35fr 0.85fr;
+  }
+}
+
+.slide-stage {
+  position: relative;
+  background: #FFFFFF;
+  color: #0F172A;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: radial-gradient(#CBD5E1 1.25px, transparent 1.25px);
+  background-size: 22px 22px;
+}
+
+[data-theme="dark"] .slide-stage {
+  background-color: #0B192E;
+  color: #F8FAFC;
+  background-image: radial-gradient(rgba(56, 189, 248, 0.16) 1.25px, transparent 1.25px);
+}
+
+@media (min-width: 768px) {
+  .slide-stage {
+    padding: 32px 36px;
+  }
+}
+
+.slide-header-block {
+  margin-bottom: 18px;
+}
+
+.slide-title {
+  margin: 6px 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.slide-subtitle {
+  margin: 0;
+  font-size: 0.96rem;
+  color: #475569;
+}
+
+[data-theme="dark"] .slide-subtitle {
+  color: #CBD5E1;
+}
+
+.slide-canvas-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.slide-footer-mark {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #1A73E8;
+}
+
+[data-theme="dark"] .slide-footer-mark {
+  color: #38BDF8;
+}
+
+/* Diagramas Específicos dos Slides */
+.slide-cover-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .slide-cover-hero {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.slide-cover-art {
+  width: 100%;
+  max-width: 240px;
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
+  border: 2px solid #24CBE5;
+  box-shadow: var(--shadow-md);
+}
+
+.slide-two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .slide-two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.slide-box {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-xs);
+}
+
+[data-theme="dark"] .slide-box {
+  background: rgba(15, 27, 51, 0.92);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.slide-box.is-highlight {
+  border-color: #1A73E8;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.12);
+}
+
+[data-theme="dark"] .slide-box.is-highlight {
+  border-color: #24CBE5;
+}
+
+.slide-box-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1A73E8;
+}
+
+[data-theme="dark"] .slide-box-kicker {
+  color: #38BDF8;
+}
+
+.slide-box-title {
+  margin: 4px 0 6px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.slide-box-text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+[data-theme="dark"] .slide-box-text {
+  color: #CBD5E1;
+}
+
+.slide-orbital-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .slide-orbital-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.slide-orbital-hub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border-radius: var(--radius-lg);
+  border: 1px dashed #1A73E8;
+  background: rgba(232, 240, 254, 0.45);
+}
+
+[data-theme="dark"] .slide-orbital-hub {
+  background: rgba(13, 27, 51, 0.7);
+  border-color: #24CBE5;
+}
+
+.slide-hub-core {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1A73E8;
+  box-shadow: var(--shadow-sm);
+}
+
+.slide-hub-satellites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.slide-funnel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.funnel-step {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid #1A73E8;
+  background: #EFF6FF;
+  color: #0F172A;
+  font-size: 0.84rem;
+}
+
+[data-theme="dark"] .funnel-step {
+  background: rgba(26, 115, 232, 0.16);
+  color: #F8FAFC;
+  border-left-color: #24CBE5;
+}
+
+.funnel-step.step-4 {
+  border-left-color: #059669;
+  background: #ECFDF5;
+}
+
+[data-theme="dark"] .funnel-step.step-4 {
+  background: rgba(16, 185, 129, 0.18);
+  border-left-color: #34D399;
+}
+
+.slide-curve-svg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  background: rgba(241, 245, 249, 0.7);
+  padding: 10px;
+}
+
+[data-theme="dark"] .slide-curve-svg {
+  background: rgba(6, 18, 36, 0.75);
+}
+
+.speaker-notes-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.slide-thumbs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 18px;
+}
+
+@media (min-width: 640px) {
+  .slide-thumbs-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.slide-thumb-btn {
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.slide-thumb-btn:hover {
+  border-color: var(--accent-primary);
+}
+
+.slide-thumb-btn.is-active {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-soft);
+}
+
+.slide-thumb-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.slide-thumb-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+/* ==========================================================================
+   Modal (<dialog>) para Zoom do Slide
+   ========================================================================== */
+
+.slide-dialog {
+  width: min(94vw, 960px);
+  max-height: 90vh;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.slide-dialog::backdrop {
+  background: rgba(6, 18, 36, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+/* ==========================================================================
+   Demos & Laboratório Prático (CLAUDE.md + Projetos)
+   ========================================================================== */
+
+.md-builder-card {
+  margin-bottom: 28px;
+}
+
+.md-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.demo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.demo-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.demo-brand-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.demo-brand-dot.theme-maxfit { background: #F97316; }
+.demo-brand-dot.theme-pulsefit { background: #A3E635; }
+.demo-brand-dot.theme-dexke { background: #EF4444; }
+.demo-brand-dot.theme-mp3 { background: #24CBE5; }
+.demo-brand-dot.theme-3d { background: #8B5CF6; }
+.demo-brand-dot.theme-notebooklm { background: #1A73E8; }
+
+.demo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.demo-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-muted);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.demo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ==========================================================================
+   Aba Perguntas Q&A
+   ========================================================================== */
+
+.qa-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .qa-toolbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.qa-search-input {
+  width: 100%;
+  max-width: 380px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+.qa-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-pill {
+  padding: 7px 13px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-pill.is-active {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  border-color: var(--accent-primary);
+}
+
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.qa-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+.qa-trigger {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.qa-trigger-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.qa-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.qa-question-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.qa-chevron {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.qa-trigger[aria-expanded="true"] .qa-chevron {
+  transform: rotate(45deg);
+}
+
+.qa-answer-panel {
+  padding: 0 20px 18px;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.qa-answer-panel[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Aba Vídeo & Capítulos Sincronizados
+   ========================================================================== */
+
+.video-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+@media (min-width: 980px) {
+  .video-layout {
+    grid-template-columns: 1.35fr 0.85fr;
+  }
+}
+
+.video-embed-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  isolation: isolate;
+  contain: layout paint;
+  background: #061224;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.video-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-status-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+.chapters-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 540px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.chapter-btn {
+  width: 100%;
+  text-align: left;
+  padding: 11px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.chapter-btn:hover {
+  border-color: var(--accent-primary);
+}
+
+.chapter-btn.is-active {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-soft);
+}
+
+.chapter-time {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  background: var(--bg-surface-muted);
+  padding: 3px 7px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.chapter-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.chapter-desc {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   Aba Sobre Matheus (Fiel ao Perfil LinkedIn + Capa Circuito + QR Code)
+   ========================================================================== */
+
+.linkedin-hero-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.linkedin-banner {
+  position: relative;
+  padding: 24px;
+  background: radial-gradient(circle at 85% 20%, rgba(249, 115, 22, 0.28), transparent 45%),
+              linear-gradient(125deg, #070C17 0%, #0F172A 55%, #1A130C 100%);
+  border-bottom: 1px solid rgba(249, 115, 22, 0.35);
+  color: #F8FAFC;
+}
+
+.linkedin-banner-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.circuit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: rgba(15, 23, 42, 0.82);
+  color: #FDBA74;
+  border: 1px solid rgba(249, 115, 22, 0.5);
+}
+
+.linkedin-profile-body {
+  padding: 22px 24px 26px;
+}
+
+.linkedin-identity-row {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+@media (min-width: 768px) {
+  .linkedin-identity-row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.linkedin-avatar-lg {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-primary);
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--bg-surface-muted);
+}
+
+.linkedin-identity-left {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .linkedin-identity-left {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.qr-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-muted);
+  border: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.qr-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  padding: 3px;
+  image-rendering: pixelated;
+}
+
+.timeline-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 20px;
+  border-left: 2px solid var(--border-strong);
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: 2px solid var(--bg-canvas);
+}
+
+.timeline-item.is-current::before {
+  background: var(--status-success);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.22);
+}
+
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--bg-surface-muted);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.skill-chip.is-top {
+  background: var(--accent-primary-soft);
+  border-color: var(--border-accent);
+  color: var(--accent-primary);
+}
+
+.fallback-notice {
+  margin-top: 10px;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}

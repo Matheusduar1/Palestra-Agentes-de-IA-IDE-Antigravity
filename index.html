@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Duarte | A Era dos Agentes de IA — Apresentação &amp; Portfólio</title>
+
+  <!-- Metatags de Autoria e Propriedade Intelectual -->
+  <meta name="author" content="Matheus Duarte">
+  <meta name="creator" content="Matheus Duarte">
+  <meta name="publisher" content="Matheus Duarte">
+  <meta name="copyright" content="Matheus Duarte">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#1A73E8">
+  <meta name="description" content="Portfólio oficial de Matheus Duarte sobre a palestra 'A Era dos Agentes de IA' apresentada na Semana Técnica da ETEC de Embu (17/11/2026): Google Antigravity, Claude Code, MCP, CLAUDE.md, demos ao vivo e trajetória profissional.">
+  <meta name="keywords" content="Matheus Duarte, Agentes de IA, Google Antigravity, Claude Code, MCP, CLAUDE.md, Semana Técnica ETEC de Embu, Infraestrutura de TI, SENAC, Portfólio">
+  <link rel="author" href="https://www.linkedin.com/in/matheus-duarte-0367b2176/">
+
+  <!-- Open Graph & Redes Sociais -->
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Matheus Duarte | A Era dos Agentes de IA — Apresentação ETEC de Embu">
+  <meta property="og:description" content="Tudo o que apresentei na Semana Técnica da ETEC de Embu (03:10 a 1:10:00): da IA passiva aos executores autônomos, demos ao vivo e minha trajetória em TI.">
+  <meta property="og:image" content="assets/og-cover.svg">
+  <meta property="article:author" content="Matheus Duarte">
+  <meta property="profile:first_name" content="Matheus">
+  <meta property="profile:last_name" content="Duarte">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Matheus Duarte | A Era dos Agentes de IA">
+  <meta name="twitter:description" content="Apresentação completa da Semana Técnica ETEC de Embu (17/11/2026) e portfólio profissional de Matheus Duarte.">
+  <meta name="twitter:image" content="assets/og-cover.svg">
+
+  <!-- Política Estrita de Segurança (CSP) para Publicação em Domínio Web -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube-nocookie.com https://www.youtube.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Dados Estruturados Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Matheus Duarte",
+        "jobTitle": "Suporte Técnico TI Trainee Infraestrutura",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Refrio Armazéns Gerais S.A."
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Senac Brasil"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Taboão da Serra",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/matheus-duarte-0367b2176/",
+          "https://www.instagram.com/matheusduar1/"
+        ]
+      },
+      {
+        "@type": "PresentationDigitalDocument",
+        "name": "A Era dos Agentes de IA — Semana Técnica ETEC de Embu",
+        "author": {
+          "@type": "Person",
+          "name": "Matheus Duarte"
+        },
+        "datePublished": "2026-11-17",
+        "inLanguage": "pt-BR",
+        "url": "https://www.youtube.com/watch?v=uT9OUVIsDXA&t=190s"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-top-row">
+        <div class="brand-identity">
+          <div class="brand-avatar-wrap">
+            <img class="brand-avatar" src="assets/matheus-duarte.png" width="42" height="42" alt="Foto de Matheus Duarte">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">MATHEUS DUARTE | 2026</span>
+            <span class="brand-subtitle">Agentes de IA • ETEC de Embu • Portfólio</span>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <span class="header-badge-live">03:10 → 1:10:00</span>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-pressed="false" aria-label="Alternar para tema escuro Semana Técnica">
+            <span id="theme-toggle-label">Tema: Slides</span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="primary-nav" aria-label="Navegação principal do portfólio">
+        <div class="nav-tablist" role="tablist" aria-label="Abas do portfólio de Matheus Duarte">
+          <button id="tab-apresentacao" class="nav-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-apresentacao" data-tab="apresentacao">
+            <span>Apresentação</span>
+          </button>
+          <button id="tab-slides" class="nav-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-slides" tabindex="-1" data-tab="slides">
+            <span>Slides</span>
+            <span class="nav-tab-badge">10</span>
+          </button>
+          <button id="tab-demos" class="nav-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-demos" tabindex="-1" data-tab="demos">
+            <span>Demos &amp; Lab</span>
+            <span class="nav-tab-badge">6</span>
+          </button>
+          <button id="tab-perguntas" class="nav-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-perguntas" tabindex="-1" data-tab="perguntas">
+            <span>Perguntas Q&amp;A</span>
+            <span class="nav-tab-badge">9</span>
+          </button>
+          <button id="tab-video" class="nav-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-video" tabindex="-1" data-tab="video">
+            <span>Vídeo</span>
+            <span class="nav-tab-badge">YT</span>
+          </button>
+          <button id="tab-sobre" class="nav-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-sobre" tabindex="-1" data-tab="sobre">
+            <span>Sobre Matheus</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container site-main">
+    <!-- ===================================================================
+         ABA 1: APRESENTAÇÃO (VISÃO GERAL, CONCEITOS & SIMULADOR AO VIVO)
+         =================================================================== -->
+    <section id="panel-apresentacao" class="tab-panel" role="tabpanel" aria-labelledby="tab-apresentacao" data-panel="apresentacao">
+      <article class="hero-card">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-meta-row">
+              <span class="badge">Semana Técnica ETEC de Embu • Dia 2</span>
+              <span class="badge badge-neutral">17 de nov. de 2026</span>
+              <span class="badge badge-cyan">03:10 – 1:10:00</span>
+            </div>
+            <h1 class="hero-title">A Era dos Agentes de IA: Do Chat Passivo à Autonomia em Software</h1>
+            <p class="hero-lead">
+              Eu sou <strong>Matheus Duarte</strong> e reuni aqui tudo o que apresentei ao vivo na palestra para os cursos de Redes, Informática e Desenvolvimento de Sistemas da ETEC de Embu — desde a arquitetura com <strong>Google Antigravity</strong>, <strong>Claude Code</strong> e <strong>MCP</strong> até projetos reais, segurança e perguntas da plateia.
+            </p>
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary" data-open-tab="slides">Explorar os 10 Slides</button>
+              <button type="button" class="btn btn-secondary" data-open-tab="video">Assistir Apresentação (03:10)</button>
+              <button type="button" class="btn btn-ghost" data-open-tab="sobre">Meu Perfil &amp; LinkedIn</button>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-chip">
+                <span class="stat-value">67 min</span>
+                <span class="stat-label">Palestra + Q&amp;A ao vivo</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-value">10 Slides</span>
+                <span class="stat-label">Arquitetura &amp; Segurança</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-value">6 Cases</span>
+                <span class="stat-label">MaxFit, PulseFit, DexKe e +</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-value">9 Perguntas</span>
+                <span class="stat-label">Debate aberto com alunos</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="speaker-broadcast-card" aria-label="Cartão do palestrante da transmissão">
+            <div class="speaker-broadcast-top">
+              <span>&lt;/&gt; ETEC DE EMBU • PALESTRANTE</span>
+              <span>AO VIVO 2026</span>
+            </div>
+            <div class="speaker-profile-row">
+              <img class="speaker-photo" src="assets/matheus-duarte.png" width="74" height="74" alt="Retrato de Matheus Duarte">
+              <div>
+                <h2 class="speaker-name">Matheus Duarte</h2>
+                <p class="speaker-role">Suporte Técnico TI Trainee • Refrio</p>
+                <p class="speaker-sub">Técnico em Informática • SENAC Taboão</p>
+              </div>
+            </div>
+            <blockquote class="speaker-quote-box">
+              “Vim direto do trabalho — não deu nem tempo de tirar a bota — para mostrar na prática que o agente de IA não substitui seu conhecimento: você é quem orquestra a ferramenta.”
+            </blockquote>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Bloco 1: O Fim do Chat vs Executores Autônomos -->
+      <section class="content-section" aria-labelledby="sec-chat-vs-agent">
+        <header class="section-header">
+          <span class="section-eyebrow">01 • Mudança de Paradigma (07:25)</span>
+          <h2 id="sec-chat-vs-agent" class="section-title">Por que saímos do "Copiar &amp; Colar" para Executores Autônomos</h2>
+          <p class="section-desc">
+            Comecei minha fala explicando o que diferencia os chatbots tradicionais (onde dependemos 100% da nossa ação manual) dos agentes que realmente ganham "mãos" para operar no sistema.
+          </p>
+        </header>
+
+        <div class="grid-2">
+          <article class="card compare-card">
+            <span class="badge badge-neutral">IA Passiva • Assistentes Conversacionais</span>
+            <h3 class="pillar-title">ChatGPT, Gemini &amp; Claude em Caixa de Diálogo</h3>
+            <ul class="compare-list">
+              <li><strong>Reativa:</strong> limita-se a responder dúvidas e gerar blocos de texto que você precisa copiar e colar manualmente.</li>
+              <li><strong>Sem acesso prático:</strong> não cria pastas, não edita seus arquivos locais e não roda comandos ou validações sozinha.</li>
+              <li><strong>Risco de alucinação em chats longos:</strong> pedir tarefas demais na mesma conversa faz o modelo se perder — como falei na palestra, você pede um cachorro e no fim ele gera <em>"um zoológico inteiro"</em>.</li>
+            </ul>
+          </article>
+
+          <article class="card compare-card is-active-agent">
+            <span class="badge badge-success">IA Ativa • Executores Autônomos</span>
+            <h3 class="pillar-title">Agentes com "Mãos" no Fluxo Real</h3>
+            <ul class="compare-list">
+              <li><strong>Ação direta (End-to-End):</strong> você entrega a intenção e o agente cria arquivos, escreve código, consulta APIs (como a <strong>ViaCEP</strong>) e executa testes.</li>
+              <li><strong>Três braços de operação:</strong> controla <strong>Navegador Web</strong>, <strong>Terminal / Shell</strong> e <strong>Sistema de Arquivos</strong> dentro dos limites da sua pasta.</li>
+              <li><strong>Memória de longo prazo e filtros:</strong> lê contexto estruturado em Markdown (<code>CLAUDE.md</code>), evita repetições e mantém foco técnico.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bloco 2: Os 3 Pilares + Ferramentas -->
+      <section class="content-section" aria-labelledby="sec-pilares">
+        <header class="section-header">
+          <span class="section-eyebrow">02 • Anatomia de um Agente (09:07)</span>
+          <h2 id="sec-pilares" class="section-title">Cérebro (LLM), Autonomia e Ponte MCP para o Mundo Físico</h2>
+        </header>
+
+        <div class="pillars-grid">
+          <article class="card">
+            <span class="pillar-num">01 • NÚCLEO</span>
+            <h3 class="pillar-title">Cérebro (LLM)</h3>
+            <p class="section-desc">
+              Modelos de linguagem treinados para raciocinar e planejar caminhos lógicos. No <strong>Google Antigravity</strong> mostrei na prática os modelos <strong>Hydrogen</strong> (substituto do Flash, ótimo custo em tokens), <strong>Argon</strong> (sucessor acima do Pro), <strong>Carbon</strong> (rival direto do Claude) e o <strong>Orchestrator</strong>.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="pillar-num">02 • CAPACIDADE</span>
+            <h3 class="pillar-title">Loop de Raciocínio</h3>
+            <p class="section-desc">
+              Antes de agir, o agente entra no ciclo <strong>Planejar → Agir → Observar → Repetir</strong>. Quando encontra um erro, ele analisa o retorno, ajusta a estratégia e tenta novamente sem parar.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="pillar-num">03 • EXECUÇÃO</span>
+            <h3 class="pillar-title">Function Calling &amp; MCP</h3>
+            <p class="section-desc">
+              Por trás de um pedido como <em>"Leia app.js para analisar as rotas"</em>, a intenção vira um payload JSON padronizado via <strong>MCP (Model Context Protocol)</strong> para interagir com arquivos e APIs com segurança.
+            </p>
+          </article>
+        </div>
+
+        <div class="tools-strip" aria-label="Principais ferramentas apresentadas">
+          <span class="tool-pill">Google Antigravity (GUI + Sandboxes)</span>
+          <span class="tool-pill">Claude Code (CLI + CLAUDE.md)</span>
+          <span class="tool-pill">Gemini 4 Hydrogen / Argon / Carbon</span>
+          <span class="tool-pill">NotebookLM / Gemini LM</span>
+          <span class="tool-pill">ViaCEP &amp; PokéAPI</span>
+          <span class="tool-pill">Ollama (Motores Locais)</span>
+        </div>
+      </section>
+
+      <!-- Bloco 3: Simulador Interativo (OOP State Machine + HITL vs Turbo) -->
+      <section class="content-section" aria-labelledby="sec-simulador">
+        <header class="section-header section-header-row">
+          <div>
+            <span class="section-eyebrow">03 • Laboratório Ao Vivo (10:19 &amp; 17:22)</span>
+            <h2 id="sec-simulador" class="section-title">Simulador Interativo: Loop do Agente, Strict Mode (HITL) vs. Turbo</h2>
+            <p class="section-desc">
+              Teste na prática o mesmo comportamento que demonstrei no telão: escolha um cenário da palestra e alterne entre o <strong>Modo Default / Strict (HITL)</strong> — com trava de aprovação humana — e o <strong>Modo Turbo</strong>.
+            </p>
+          </div>
+        </header>
+
+        <div class="simulator-shell">
+          <div class="sim-toolbar">
+            <div>
+              <span class="mono">Modo de Governança:</span>
+              <div class="sim-mode-switch" role="group" aria-label="Modo de execução do agente">
+                <button id="sim-mode-strict" class="sim-mode-btn is-active" type="button" aria-pressed="true">Default / Strict (HITL)</button>
+                <button id="sim-mode-turbo" class="sim-mode-btn is-turbo" type="button" aria-pressed="false">Turbo Autônomo</button>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <button id="sim-run-btn" class="btn btn-primary btn-sm" type="button">Executar Loop</button>
+              <button id="sim-reset-btn" class="btn btn-secondary btn-sm" type="button">Reiniciar</button>
+            </div>
+          </div>
+
+          <div class="sim-body">
+            <div>
+              <div id="sim-scenarios-host" class="sim-scenarios" aria-label="Cenários da palestra"></div>
+              <div id="sim-nodes-host" class="loop-nodes" aria-live="polite"></div>
+
+              <div id="sim-hitl-gate" class="sim-hitl-gate" hidden>
+                <strong>Trava de Segurança (Human-in-the-Loop):</strong>
+                <p class="section-desc">O agente solicitou permissão antes de alterar arquivos na pasta do projeto:</p>
+                <code id="sim-hitl-cmd" class="mono"></code>
+                <div class="sim-hitl-actions">
+                  <button id="sim-approve-btn" class="btn btn-success btn-sm" type="button">Permitir nesta pasta</button>
+                  <button id="sim-deny-btn" class="btn btn-danger btn-sm" type="button">Bloquear ação</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="terminal-window" aria-label="Console simulado de execução do agente">
+              <div class="terminal-titlebar">
+                <div class="terminal-dots" aria-hidden="true">
+                  <span class="terminal-dot dot-red"></span>
+                  <span class="terminal-dot dot-amber"></span>
+                  <span class="terminal-dot dot-green"></span>
+                </div>
+                <span>antigravity-agent-loop — sandbox</span>
+              </div>
+              <div id="sim-log-host" class="terminal-body" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===================================================================
+         ABA 2: DECK COMPLETO COM OS 10 SLIDES ORIGINAIS
+         =================================================================== -->
+    <section id="panel-slides" class="tab-panel" role="tabpanel" aria-labelledby="tab-slides" data-panel="slides" hidden>
+      <header class="section-header section-header-row">
+        <div>
+          <span class="section-eyebrow">Deck Original • MATHEUS DUARTE | 2026</span>
+          <h2 class="section-title">Todos os 10 Slides da Apresentação + O Que Expliquei Ao Vivo</h2>
+          <p class="section-desc">
+            Navegue pelos slides originais com as setas do teclado (← / →) ou clique nas miniaturas abaixo para comparar o visual exato do material com minha explicação detalhada.
+          </p>
+        </div>
+        <div class="deck-controls-bar">
+          <span id="slide-counter" class="badge">Slide 01 / 10</span>
+          <button id="slide-prev-btn" class="btn btn-secondary btn-sm" type="button">← Anterior</button>
+          <button id="slide-next-btn" class="btn btn-primary btn-sm" type="button">Próximo →</button>
+          <button id="slide-zoom-btn" class="btn btn-ghost btn-sm" type="button">Ampliar Slide</button>
+        </div>
+      </header>
+
+      <div class="deck-progress-track" aria-hidden="true">
+        <div id="slide-progress-fill" class="deck-progress-fill" data-progress="1"></div>
+      </div>
+
+      <div class="slide-layout-split">
+        <article id="slide-stage-host" class="slide-stage" aria-live="polite"></article>
+        <div id="slide-notes-host"></div>
+      </div>
+
+      <div id="slide-thumbs-host" class="slide-thumbs-grid" aria-label="Miniaturas dos 10 slides"></div>
+
+      <dialog id="slide-zoom-dialog" class="slide-dialog" aria-labelledby="slide-dialog-title">
+        <div class="dialog-head">
+          <h3 id="slide-dialog-title" class="pillar-title">Visualização Ampliada</h3>
+          <button id="slide-dialog-close" class="btn btn-secondary btn-sm" type="button">Fechar</button>
+        </div>
+        <div id="slide-dialog-body"></div>
+      </dialog>
+    </section>
+
+    <!-- ===================================================================
+         ABA 3: DEMOS AO VIVO & LABORATÓRIO DE CONTEXTO (.md)
+         =================================================================== -->
+    <section id="panel-demos" class="tab-panel" role="tabpanel" aria-labelledby="tab-demos" data-panel="demos" hidden>
+      <header class="section-header">
+        <span class="section-eyebrow">Prática na Tela &amp; Engenharia de Contexto</span>
+        <h2 class="section-title">Demos Ao Vivo, Projetos Reais &amp; Estruturação com Markdown</h2>
+        <p class="section-desc">
+          Na segunda metade da apresentação mostrei o Google Antigravity funcionando em código real — criando aplicativos mobile-first do zero, consumindo APIs, organizando arquivos do dia a dia e usando arquivos <code>.md</code> para controlar o agente.
+        </p>
+      </header>
+
+      <article class="card md-builder-card">
+        <div class="section-header">
+          <span class="badge badge-cyan">14:54 – 16:59 • Arquivo Mais Importante do Agente</span>
+          <h3 id="md-preset-title" class="pillar-title">CLAUDE.md (Web Mobile-First)</h3>
+          <p id="md-preset-subtitle" class="section-desc">Como configurar o arquivo mais importante do agente para projetos front-end.</p>
+        </div>
+        <div id="md-presets-tabs" class="md-tabs" aria-label="Modelos de arquivos Markdown"></div>
+        <div class="terminal-window">
+          <div class="terminal-titlebar">
+            <div class="terminal-dots" aria-hidden="true">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-amber"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <span>contexto-persistente.md</span>
+          </div>
+          <pre id="md-preset-code" class="terminal-body"></pre>
+        </div>
+      </article>
+
+      <div id="demos-grid-host" class="grid-3"></div>
+    </section>
+
+    <!-- ===================================================================
+         ABA 4: PERGUNTAS & RESPOSTAS (Q&A COM A PLATEIA)
+         =================================================================== -->
+    <section id="panel-perguntas" class="tab-panel" role="tabpanel" aria-labelledby="tab-perguntas" data-panel="perguntas" hidden>
+      <header class="section-header">
+        <span class="section-eyebrow">Interação com os Alunos • 37:19 até 1:09:35</span>
+        <h2 class="section-title">Perguntas da Plateia &amp; Encerramento "Caixa de Ferramentas"</h2>
+        <p class="section-desc">
+          Todas as 9 perguntas feitas ao vivo pelos estudantes e professores da ETEC de Embu sobre carreira júnior, segurança de pastas, jailbreak, Ollama local, testes de invasão em apps de IA e checagem de arquivos <code>.apk</code>.
+        </p>
+      </header>
+
+      <div class="qa-toolbar">
+        <label class="sr-only" for="qa-search-input">Pesquisar nas perguntas e respostas</label>
+        <input id="qa-search-input" class="qa-search-input" type="search" placeholder="Filtrar por tema (ex.: júnior, Turbo, Ollama, .apk, Refrio)..." autocomplete="off">
+        <div id="qa-filter-pills" class="qa-filter-pills" aria-label="Categorias de perguntas"></div>
+      </div>
+
+      <p id="qa-result-count" class="fallback-notice"></p>
+      <div id="qa-list-host" class="qa-list"></div>
+    </section>
+
+    <!-- ===================================================================
+         ABA 5: VÍDEO ORIGINAL & CAPÍTULOS SINCRONIZADOS
+         =================================================================== -->
+    <section id="panel-video" class="tab-panel" role="tabpanel" aria-labelledby="tab-video" data-panel="video" hidden>
+      <header class="section-header">
+        <span class="section-eyebrow">Transmissão Oficial • Canal Etec de Embu</span>
+        <h2 class="section-title">Vídeo Original da Apresentação (03:10 até 1:10:00)</h2>
+        <p class="section-desc">
+          Assista à gravação completa da <strong>Semana Técnica ETEC de Embu — Dia 2</strong> (transmitida em 17/11/2026) diretamente no player abaixo ou abra no YouTube já no minuto exato em que minha apresentação começa.
+        </p>
+      </header>
+
+      <div class="video-layout">
+        <div>
+          <div class="video-embed-box">
+            <iframe
+              id="youtube-player-iframe"
+              class="video-iframe"
+              src="https://www.youtube-nocookie.com/embed/uT9OUVIsDXA?start=190&end=4200&rel=0"
+              title="Semana Técnica ETEC de Embu - Dia 2 - Palestra Matheus Duarte (03:10 a 1:10:00)"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="video-status-bar">
+            <span id="video-current-chapter" class="mono">Ponto ativo: 03:10 — Abertura da apresentação</span>
+            <a id="video-direct-link" class="btn btn-primary btn-sm" href="https://www.youtube.com/watch?v=uT9OUVIsDXA&t=190s" target="_blank" rel="noopener noreferrer">
+              Abrir Vídeo Original no YouTube ↗
+            </a>
+          </div>
+
+          <article class="card content-section">
+            <h3 class="pillar-title">Sobre esta Transmissão</h3>
+            <p class="section-desc">
+              <strong>Evento:</strong> Semana Técnica da ETEC de Embu das Artes (Redes de Computadores, Informática e Desenvolvimento de Sistemas) — Dia 2.<br>
+              <strong>Canal:</strong> <a href="https://www.youtube.com/@etecdeembu7121" target="_blank" rel="noopener noreferrer">Etec de Embu no YouTube ↗</a> • <strong>Data:</strong> 17 de novembro de 2026.<br>
+              <strong>Palestrantes do Dia 2:</strong> Jairton Gomes (Docker), Guilherme Andrade (MVC), <strong>Matheus Duarte (Workshop e Agentes de IA)</strong> e Lucas Luz (Seu futuro é global).
+            </p>
+            <p class="fallback-notice">
+              Caso seu navegador ou rede corporativa bloqueie incorporações de YouTube, utilize o botão acima <strong>"Abrir Vídeo Original no YouTube ↗"</strong>.
+            </p>
+          </article>
+        </div>
+
+        <aside class="card" aria-label="Capítulos da apresentação">
+          <h3 class="pillar-title">Capítulos Sincronizados (14 marcos)</h3>
+          <p class="fallback-notice">Clique em qualquer capítulo para pular o player direto para o momento exato da palestra:</p>
+          <div id="video-chapters-host" class="chapters-scroll"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABA 6: SOBRE MATHEUS (LINKEDIN + TRAJETÓRIA + COMPETÊNCIAS)
+         =================================================================== -->
+    <section id="panel-sobre" class="tab-panel" role="tabpanel" aria-labelledby="tab-sobre" data-panel="sobre" hidden>
+      <article class="card linkedin-hero-card">
+        <div class="linkedin-banner">
+          <div class="linkedin-banner-badges" aria-label="Stack visual da capa do LinkedIn">
+            <span class="circuit-badge">Java</span>
+            <span class="circuit-badge">Python</span>
+            <span class="circuit-badge">Arduino IDE</span>
+            <span class="circuit-badge">Edição de Vídeo</span>
+            <span class="circuit-badge">Desenvolvimento de Jogos</span>
+          </div>
+        </div>
+
+        <div class="linkedin-profile-body">
+          <div class="linkedin-identity-row">
+            <div class="linkedin-identity-left">
+              <img class="linkedin-avatar-lg" src="assets/matheus-duarte.png" width="96" height="96" alt="Foto oficial de perfil de Matheus Duarte">
+              <div>
+                <div class="hero-meta-row">
+                  <span class="badge">LinkedIn Verificado • Ele/Dele</span>
+                  <span class="badge badge-success">81 conexões • 85 seguidores</span>
+                </div>
+                <h2 class="section-title">Matheus Duarte</h2>
+                <p class="section-desc"><strong>Suporte Técnico TI Trainee / Refrio Armazéns Gerais LTDA</strong></p>
+                <p class="fallback-notice">Taboão da Serra, São Paulo, Brasil • Senac Brasil • Disponível presencial e remoto</p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/matheus-duarte-0367b2176/" target="_blank" rel="noopener noreferrer">
+                    Conectar no LinkedIn ↗
+                  </a>
+                  <a class="btn btn-secondary btn-sm" href="https://www.instagram.com/matheusduar1/" target="_blank" rel="noopener noreferrer">
+                    Instagram @matheusduar1 ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="qr-card" aria-label="QR Code exibido durante a palestra para conectar no LinkedIn">
+              <img class="qr-img" src="assets/linkedin-qr.png" width="72" height="72" alt="QR Code oficial de Matheus Duarte exibido na Semana Técnica">
+              <div>
+                <strong class="mono">QR Code da Palestra</strong>
+                <p class="fallback-notice">Aponte ou clique para acessar o LinkedIn oficial.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-section">
+            <h3 class="pillar-title">Sobre</h3>
+            <p class="section-desc">
+              <strong>Suporte Técnico Trainee | Estudante de TI | Infraestrutura, Redes &amp; Atendimento ao Usuário | Vivência em Logística e Audiovisual.</strong>
+            </p>
+            <p class="section-desc">
+              Atuo como Suporte Técnico Trainee em Infraestrutura de TI com prática em montagem, manutenção e diagnóstico de hardware e software corporativo, além de desenvolvimento voltado a automações com Python, Java e Arduino IDE. Somo a essa base técnica meu histórico como Videomaker (Premiere Pro, After Effects, Photoshop e CapCut) e organização operacional adquirida na Logística.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Destaque da história contada no palco (47:29) -->
+      <article class="card content-section">
+        <span class="badge badge-cyan">Minha Virada de Carreira • Contada aos 47:29 da Palestra</span>
+        <h3 class="pillar-title">Da Logística e Edição Audiovisual à Infraestrutura de TI</h3>
+        <p class="section-desc">
+          Comecei na Logística (Raia Drogasil, Total Química e Tag Mensageria), depois estudei edição de vídeo sozinho pelo YouTube e atuei 5 anos atendendo projetos grandes como Geraldo Luís, Paris 6, Mercado Livre e comerciais automotivos. Após ser desligado de uma vaga por não ter certificação nem domínio de Motion Graphics vetorial, voltei para a logística até minha mãe me lembrar de quando eu desmontava carrinhos de controle remoto na infância e me incentivar: <em>"Vira TI!"</em>. Entrei no Técnico em Informática no SENAC Taboão da Serra — onde construí até um jogo no Arduino —, comecei na Refrio como Assistente de Qualidade e conquistei minha transição interna para <strong>Suporte Técnico TI Trainee em Infraestrutura</strong>.
+        </p>
+      </article>
+
+      <div class="grid-2 content-section">
+        <section aria-labelledby="sec-experiencia">
+          <h3 id="sec-experiencia" class="section-title">Experiência Profissional (8 registros)</h3>
+          <div id="profile-experience-host" class="timeline-list content-section"></div>
+        </section>
+
+        <div>
+          <section aria-labelledby="sec-formacao">
+            <h3 id="sec-formacao" class="section-title">Formação Acadêmica &amp; Certificação</h3>
+            <article class="card content-section">
+              <span class="badge badge-success">Licença &amp; Certificado • Cisco</span>
+              <h4 class="pillar-title">Digital Safety and Security Awareness</h4>
+              <p class="mono">Cisco • Emitida em out. de 2026 • Cibersegurança</p>
+              <a class="btn btn-ghost btn-sm" href="https://www.credly.com/badges/ff56993a-4038-4bd3-aacb-1f6ab5baaca3/linked_in_profile" target="_blank" rel="noopener noreferrer">
+                Exibir credencial no Credly ↗
+              </a>
+            </article>
+            <div id="profile-education-host" class="timeline-list content-section"></div>
+          </section>
+
+          <section class="card content-section" aria-labelledby="sec-servicos">
+            <h3 id="sec-servicos" class="pillar-title">Serviços, Idiomas &amp; Atividades</h3>
+            <p class="section-desc">
+              <strong>Serviços prestados (LinkedIn):</strong> Edição de vídeo • Produção de vídeo • Conserto de computadores.
+            </p>
+            <p class="section-desc">
+              <strong>Idiomas:</strong> Português (nativo) • Inglês (básico a intermediário — cursando no Senac Brasil).
+            </p>
+            <ul id="profile-activities-host" class="compare-list"></ul>
+          </section>
+        </div>
+      </div>
+
+      <section class="card content-section" aria-labelledby="sec-competencias">
+        <header class="section-header">
+          <span class="section-eyebrow">Competências do Perfil LinkedIn</span>
+          <h3 id="sec-competencias" class="section-title">36 Competências Mapeadas</h3>
+        </header>
+        <div id="profile-skills-filter" class="qa-filter-pills"></div>
+        <div id="profile-skills-host" class="skills-cloud content-section"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-brand-line">MATHEUS DUARTE | 2026</span>
+          <p class="section-desc">
+            Portfólio técnico e registro completo da palestra <strong>"A Era dos Agentes de IA"</strong> ministrada na Semana Técnica da ETEC de Embu das Artes (17/11/2026).
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Links Oficiais</h2>
+          <ul class="footer-list">
+            <li><a href="https://www.youtube.com/watch?v=uT9OUVIsDXA&t=190s" target="_blank" rel="noopener noreferrer">Vídeo Original da Apresentação (YouTube) ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/matheus-duarte-0367b2176/" target="_blank" rel="noopener noreferrer">LinkedIn de Matheus Duarte ↗</a></li>
+            <li><a href="https://www.instagram.com/matheusduar1/" target="_blank" rel="noopener noreferrer">Instagram @matheusduar1 ↗</a></li>
+            <li><a href="https://www.credly.com/badges/ff56993a-4038-4bd3-aacb-1f6ab5baaca3/linked_in_profile" target="_blank" rel="noopener noreferrer">Certificado Cisco (Credly) ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Arquitetura &amp; Segurança Web</h2>
+          <ul class="footer-list">
+            <li>HTML5 semântico + WAI-ARIA Tabs</li>
+            <li>JavaScript OOP Orientado a Eventos</li>
+            <li>CSP estrita sem scripts/estilos inline</li>
+            <li>Cabeçalhos HTTP prontos em <code>_headers</code> e <code>vercel.json</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Matheus Duarte — Autor &amp; Palestrante. Todos os direitos reservados.</span>
+        <span>Taboão da Serra, São Paulo • Brasil</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/core.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
