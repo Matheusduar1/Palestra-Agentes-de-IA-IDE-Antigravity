@@ -1,0 +1,135 @@
+/* ==========================================================================
+   MATHEUS DUARTE | 2026 — Design Tokens
+   Tema Claro (Padrão): Identidade original dos slides (.pptx)
+   Tema Escuro: Moldura Semana Técnica ETEC de Embu & Antigravity IDE
+   ========================================================================== */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Superfícies & Canvas (Slides originais MATHEUS DUARTE | 2026) */
+  --bg-canvas: #F8FAFC;
+  --bg-dot: #CBD5E1;
+  --bg-surface: #FFFFFF;
+  --bg-surface-muted: #F1F5F9;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-header: rgba(248, 250, 252, 0.90);
+
+  /* Bordas */
+  --border-subtle: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --border-accent: rgba(26, 115, 232, 0.35);
+
+  /* Tipografia */
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-on-accent: #FFFFFF;
+
+  /* Cores de Destaque & Semântica */
+  --accent-primary: #1A73E8;
+  --accent-primary-hover: #1557B0;
+  --accent-primary-soft: #E8F0FE;
+  --accent-cyan: #058DC7;
+  --accent-cyan-bright: #24CBE5;
+  --accent-cyan-soft: #E0F7FA;
+
+  --status-success: #059669;
+  --status-success-soft: #ECFDF5;
+  --status-warning: #D97706;
+  --status-warning-soft: #FFFBEB;
+  --status-danger: #DC2626;
+  --status-danger-soft: #FEF2F2;
+
+  /* Terminal & Blocos de Código (sempre contraste alto escuro) */
+  --terminal-bg: #0F172A;
+  --terminal-bar: #1E293B;
+  --terminal-border: #334155;
+  --terminal-text: #E2E8F0;
+  --terminal-muted: #94A3B8;
+  --terminal-accent: #38BDF8;
+  --terminal-green: #34D399;
+  --terminal-amber: #F59E0B;
+
+  /* Efeitos & Sombras */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 24px 50px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 0 0 4px rgba(26, 115, 232, 0.14);
+
+  /* Gradiente de capa LinkedIn & HUD */
+  --hud-navy-start: #061224;
+  --hud-navy-end: #0B1F3A;
+  --hud-cyan-line: rgba(36, 203, 229, 0.35);
+
+  /* Fontes */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Escalas */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  --container-max: 1240px;
+  --header-height: 74px;
+  --transition-fast: 160ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-base: 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Superfícies & Canvas (ETEC Semana Técnica Broadcast + Antigravity IDE) */
+  --bg-canvas: #061224;
+  --bg-dot: rgba(36, 203, 229, 0.18);
+  --bg-surface: #0D1B33;
+  --bg-surface-muted: #132544;
+  --bg-surface-elevated: #162B4E;
+  --bg-header: rgba(6, 18, 36, 0.88);
+
+  /* Bordas HUD */
+  --border-subtle: rgba(56, 189, 248, 0.18);
+  --border-strong: rgba(56, 189, 248, 0.36);
+  --border-accent: rgba(36, 203, 229, 0.55);
+
+  /* Tipografia */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-on-accent: #061224;
+
+  /* Destaques */
+  --accent-primary: #38BDF8;
+  --accent-primary-hover: #24CBE5;
+  --accent-primary-soft: rgba(56, 189, 248, 0.14);
+  --accent-cyan: #24CBE5;
+  --accent-cyan-bright: #38BDF8;
+  --accent-cyan-soft: rgba(36, 203, 229, 0.14);
+
+  --status-success: #34D399;
+  --status-success-soft: rgba(16, 185, 129, 0.14);
+  --status-warning: #FBBF24;
+  --status-warning-soft: rgba(245, 158, 11, 0.15);
+  --status-danger: #F87171;
+  --status-danger-soft: rgba(239, 68, 68, 0.15);
+
+  /* Terminal */
+  --terminal-bg: #050D1A;
+  --terminal-bar: #0F1A2E;
+  --terminal-border: rgba(56, 189, 248, 0.25);
+  --terminal-text: #E2E8F0;
+  --terminal-muted: #94A3B8;
+
+  /* Sombras */
+  --shadow-xs: 0 2px 6px rgba(2, 6, 23, 0.35);
+  --shadow-sm: 0 6px 18px rgba(2, 6, 23, 0.45);
+  --shadow-md: 0 14px 36px rgba(2, 6, 23, 0.55);
+  --shadow-lg: 0 28px 60px rgba(2, 6, 23, 0.72);
+  --shadow-glow: 0 0 0 4px rgba(36, 203, 229, 0.2);
+}

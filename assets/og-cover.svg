@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="MATHEUS DUARTE | 2026 — A Era dos Agentes de IA">
+  <defs>
+    <linearGradient id="bgNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061224"/>
+      <stop offset="100%" stop-color="#0B1F3A"/>
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A73E8"/>
+      <stop offset="100%" stop-color="#24CBE5"/>
+    </linearGradient>
+    <pattern id="dotGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.5" fill="#1E3A5F"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgNavy)"/>
+  <rect width="1200" height="630" fill="url(#dotGrid)" opacity="0.65"/>
+  <rect x="44" y="44" width="1112" height="542" rx="24" fill="#F8FAFC"/>
+  <rect x="44" y="44" width="1112" height="10" rx="5" fill="url(#accentCyan)"/>
+  <rect x="96" y="108" width="338" height="38" rx="19" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.5"/>
+  <text x="265" y="133" text-anchor="middle" font-family="monospace" font-weight="700" font-size="16" fill="#1A73E8">SEMANA TÉCNICA ETEC DE EMBU • DIA 2</text>
+  <text x="96" y="232" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="68" fill="#0F172A">A Era dos Agentes de IA</text>
+  <text x="96" y="300" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="28" fill="#475569">Como o Google Antigravity e o Claude Code estão</text>
+  <text x="96" y="340" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="28" fill="#475569">redefinindo a autonomia em software.</text>
+  <g transform="translate(96, 392)">
+    <rect width="206" height="44" rx="10" fill="#0F172A"/>
+    <text x="103" y="28" text-anchor="middle" font-family="monospace" font-weight="600" font-size="16" fill="#24CBE5">01 • Planejar → Agir</text>
+    <rect x="224" width="234" height="44" rx="10" fill="#E8F0FE"/>
+    <text x="341" y="28" text-anchor="middle" font-family="monospace" font-weight="600" font-size="16" fill="#1A73E8">02 • MCP &amp; CLAUDE.md</text>
+    <rect x="476" width="248" height="44" rx="10" fill="#ECFDF5"/>
+    <text x="600" y="28" text-anchor="middle" font-family="monospace" font-weight="600" font-size="16" fill="#059669">03 • Strict HITL &amp; Turbo</text>
+  </g>
+  <line x1="96" y1="490" x2="1104" y2="490" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="96" y="538" font-family="monospace" font-weight="700" font-size="22" fill="#1A73E8" letter-spacing="2">MATHEUS DUARTE  |  2026</text>
+  <text x="1104" y="538" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="18" fill="#64748B">Suporte Técnico TI Trainee • SENAC • Refrio</text>
+</svg>
